@@ -18,7 +18,6 @@ jobs:
                   token: ${{ secrets.LIBOPEN_PAT }}
             - name: Update Submodules
               run: |
-                  git pull --recurse-submodules
                   git submodule update --remote --recursive
             - name: Setup Rokit
               uses: CompeyDev/setup-rokit@v0.1.2

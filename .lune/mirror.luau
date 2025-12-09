@@ -5,6 +5,8 @@ local DELIMITER = if process.os == "windows" then "\\" else "/"
 local INPUT_DIR = table.concat({ process.cwd, "game", "src", "libopen" }, DELIMITER)
 local OUTPUT_DIR = table.concat({ process.cwd, "mirror" }, DELIMITER)
 
+print(fs.readDir(process.cwd))
+
 -- TODO: setup package managers
 for _, dir in fs.readDir(INPUT_DIR) do
 	local out = OUTPUT_DIR .. DELIMITER .. dir
