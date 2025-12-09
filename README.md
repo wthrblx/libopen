@@ -3,10 +3,10 @@
 A mirror of Welcome To Hell's in-house open source packages usable for tower
 scripting.
 
-<small>
-    The concept for this repository is based on
-    <a href="https://github.com/Elttob/LibOpen">Studio Elttob's LibOpen</a>
-</small>
+The concept for this repository is based on
+[Studio Elttob's LibOpen,](https://github.com/Elttob/LibOpen) though born as a
+consequence of separating batteries included for Welcome To Hell's tower
+scripting standard library.
 
 > [!WARNING]
 > Please note that this repository is a read-only mirror, and does not accept
