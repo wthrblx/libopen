@@ -12,6 +12,11 @@ jobs:
     mirror:
         runs-on: ubuntu-latest
         steps:
+            - name: Create app token
+              uses: actions/create-github-app-token@v2
+              with:
+                  token: ${{ secrets.LIBOPEN_PAT }}
+                  owner: wthrblx
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
