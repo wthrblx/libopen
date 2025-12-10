@@ -94,16 +94,16 @@ function Option.map<T..., U...>(self: Option<T...>, map: (T...) -> U...): Option
 	return Option.Some(map(unpack(self, 1, self.n))) :: any
 end
 
-function Option.mapOrRest<T..., U...>(self: Option<T...>, map: (T...) -> U..., ...: U...): U...
+function Option.mapOr<T..., U...>(self: Option<T...>, map: (T...) -> U..., ...: U...): U...
 	if self.n == 0 then
 		return ...
 	end
 	return map(unpack(self, 1, self.n))
 end
 
-function Option.mapOrElse<T..., U...>(self: Option<T...>, map: (T...) -> U..., fallback: (T...) -> U...): U...
+function Option.mapOrElse<T..., U...>(self: Option<T...>, map: (T...) -> U..., fallback: () -> U...): U...
 	if self.n == 0 then
-		return fallback(unpack(self, 1, self.n))
+		return fallback()
 	end
 	return map(unpack(self, 1, self.n))
 end
