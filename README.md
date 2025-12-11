@@ -1,4 +1,4 @@
-# LibOpen
+# Batteries for Welcome To Hell
 
 A mirror of Welcome To Hell's in-house open source packages usable for tower
 scripting.

@@ -2,7 +2,7 @@ local process = require("@lune/process")
 local fs = require("@lune/fs")
 
 local DELIMITER = if process.os == "windows" then "\\" else "/"
-local INPUT_DIR = table.concat({ process.cwd, "game", "src", "libopen" }, DELIMITER)
+local INPUT_DIR = table.concat({ process.cwd, "game", "src", "batteries" }, DELIMITER)
 local OUTPUT_DIR = table.concat({ process.cwd, "mirror" }, DELIMITER)
 
 print(fs.readDir(table.concat({ process.cwd, "game" }, DELIMITER)))
