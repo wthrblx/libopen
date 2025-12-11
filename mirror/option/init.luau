@@ -132,6 +132,19 @@ function Option.xor<T...>(self: Option<T...>, other: Option<T...>): Option<T...>
 	return if self.n == 0 then other elseif other.n == 0 then self else Option.None
 end
 
+function Option.match<T..., U...>(
+	self: Option<T...>,
+	match: {
+		Some: (T...) -> U...,
+		None: () -> U...,
+	}
+): U...
+	if self.n == 0 then
+		return match.None()
+	end
+	return match.Some(unpack(self, 1, self.n))
+end
+
 -- TODO: Option.set
 -- TODO: Option.getOrSet
 -- TODO: Option.push
